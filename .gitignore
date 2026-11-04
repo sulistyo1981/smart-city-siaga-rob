@@ -1,0 +1,11 @@
+# Catatan pribadi proyek
+CLAUDE.md
+PROGRESS.md
+
+# Hasil program (dibuat ulang setiap dijalankan)
+hasil/
+
+# File sementara Python & pengaturan editor lokal
+__pycache__/
+*.pyc
+.vscode/
