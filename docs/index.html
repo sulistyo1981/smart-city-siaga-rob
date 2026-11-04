@@ -1,0 +1,460 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard SIAGA ROB</title>
+<style>
+  body { margin:0; font-family:Arial, sans-serif; background:#f2f5f8; color:#1b2733; }
+  header { background:#0b3d5c; color:white; padding:18px 24px; }
+  header h1 { margin:0 0 4px; font-size:24px; }
+  main { max-width:1100px; margin:0 auto; padding:16px; }
+  section { background:white; border-radius:10px; padding:16px 20px; margin-bottom:16px;
+             box-shadow:0 1px 4px rgba(0,0,0,.1); }
+  h2 { margin-top:0; font-size:19px; }
+  .label { display:inline-block; padding:2px 8px; border-radius:4px; font-size:12px; font-weight:bold; }
+  .simulasi { background:#fde2e2; color:#a31515; }
+  .nyata { background:#dff5e3; color:#1d6b30; }
+  .konsep { background:#e3ecfb; color:#1f4e9c; }
+  .peringatan { background:#fff8e6; padding:10px 14px; border-radius:8px; margin-bottom:12px; }
+  .alur { display:flex; gap:8px; flex-wrap:wrap; align-items:stretch; margin-bottom:14px; }
+  .tahap { flex:1; min-width:140px; background:#eef5fb; border-radius:8px; padding:10px; text-align:center; }
+  .ikon { font-size:28px; }
+  .panah { align-self:center; font-size:22px; color:#0b3d5c; }
+  .baris-kartu { display:flex; gap:12px; flex-wrap:wrap; }
+  .kartu { flex:1; min-width:120px; background:#f8fafc; border-radius:8px; padding:12px; text-align:center; }
+  .angka { font-size:32px; font-weight:bold; }
+  img { max-width:100%; }
+  iframe { width:100%; height:480px; border:0; border-radius:8px; }
+  .tabel { border-collapse:collapse; width:100%; font-size:14px; }
+  .tabel th, .tabel td { padding:6px 8px; border-bottom:1px solid #e3e8ee; text-align:left; }
+  .tabel th { background:#eef3f7; }
+  .rek { border-left:4px solid #0b3d5c; padding:4px 12px; margin-bottom:10px; }
+  .kecil { font-size:12px; color:#66727f; }
+</style></head><body>
+<header>
+  <h1>🌊 Dashboard SIAGA ROB Semarang</h1>
+  Sistem peringatan dini banjir & rob · Gerakan Semarang SMART · diperbarui 04-11-2026 19:37 WIB
+</header>
+<main>
+  <section>
+    <h2>Status kecamatan hari ini <span class='label nyata'>DATA NYATA</span> <span class='label konsep'>+ ASUMSI</span></h2>
+    <div class="baris-kartu"><div class='kartu' style='border-top:6px solid #d62828'><div class='angka'>0</div>🔴 Awas<div class='kecil'>–</div></div><div class='kartu' style='border-top:6px solid #f07c00'><div class='angka'>0</div>🟠 Siaga<div class='kecil'>–</div></div><div class='kartu' style='border-top:6px solid #f2c200'><div class='angka'>2</div>🟡 Waspada<div class='kecil'>Semarang Utara, Genuk</div></div><div class='kartu' style='border-top:6px solid #2e9e44'><div class='angka'>8</div>🟢 Aman<div class='kecil'>Tugu, Semarang Timur, Gayamsari, Semarang Barat, Pedurungan, Semarang Tengah, Candisari, Tembalang</div></div></div>
+  </section>
+  <section>
+    <h2>Bagaimana SIAGA ROB bekerja <span class="label konsep">RANCANGAN SISTEM</span></h2>
+    <div class="alur"><div class='tahap'><div class='ikon'>📡</div><b>Sumber data</b><div class='kecil'>Sensor IoT muka air & pasang laut, BMKG, Open-Meteo</div></div><span class='panah'>➜</span><div class='tahap'><div class='ikon'>🗄️</div><b>Pusat data</b><div class='kecil'>Data terkumpul di Satu Data Kota Semarang</div></div><span class='panah'>➜</span><div class='tahap'><div class='ikon'>🧮</div><b>Analisis</b><div class='kecil'>Skor risiko 0–100 per kecamatan, diperbarui otomatis</div></div><span class='panah'>➜</span><div class='tahap'><div class='ikon'>🚨</div><b>Peringatan</b><div class='kecil'>Notifikasi WhatsApp/SMS ke warga berstatus Siaga & Awas</div></div><span class='panah'>➜</span><div class='tahap'><div class='ikon'>🏛️</div><b>Aksi</b><div class='kecil'>Rekomendasi tindakan untuk Pemkot, BPBD, dan warga</div></div></div>
+    <p class="kecil">Di aplikasi ini skor memakai data simulasi dan open data nyata; sensor IoT adalah rancangan
+    untuk tahap penerapan.</p>
+    <h3>Transformasi digital</h3>
+    <table class="tabel">
+      <tr><th>Cara konvensional</th><th>Dengan SIAGA ROB</th></tr>
+      <tr><td>Info banjir menyebar dari mulut ke mulut dan media sosial</td><td>Peringatan otomatis per kecamatan langsung ke ponsel warga</td></tr><tr><td>Bertindak setelah air datang (reaktif)</td><td>Bersiap sebelum rob datang berdasarkan prakiraan (proaktif)</td></tr><tr><td>Data tersebar di banyak instansi</td><td>Satu pusat data terbuka (CSV/JSON) yang bisa dipakai bersama</td></tr><tr><td>Keputusan berdasarkan perkiraan petugas di lapangan</td><td>Keputusan berbasis skor risiko dan rekomendasi data</td></tr>
+    </table>
+  </section>
+  <section>
+    <h2>Grafik skor risiko hari ini <span class='label nyata'>DATA NYATA</span> <span class='label konsep'>+ ASUMSI</span></h2><img src='grafik_skor_nyata.png' alt='Grafik skor risiko data nyata per kecamatan'><p class='kecil'>Hujan dan pasang laut dari Open-Meteo, diperbarui setiap program dijalankan; penurunan tanah dan paparan rob masih asumsi.</p>
+  </section>
+  <section>
+    <h2>Peta risiko & posko pengungsian <span class="label simulasi">DATA SIMULASI</span></h2>
+    <iframe src="peta_siaga_rob.html" title="Peta SIAGA ROB"></iframe>
+  </section>
+  <section>
+    <h2>Kondisi nyata hari ini <span class="label nyata">DATA NYATA · OPEN DATA</span></h2>
+    <h3>🌧️ Curah hujan (mm) – Open-Meteo</h3><table class="dataframe tabel">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Wilayah</th>
+      <th>Kelompok</th>
+      <th>3 hari lalu</th>
+      <th>Hari ini</th>
+      <th>Prakiraan maks (s.d. +2 hari)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Semarang Utara</td>
+      <td>Kota Semarang</td>
+      <td>4.1</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>Genuk</td>
+      <td>Kota Semarang</td>
+      <td>7.0</td>
+      <td>0.1</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <td>Tugu</td>
+      <td>Kota Semarang</td>
+      <td>11.3</td>
+      <td>0.0</td>
+      <td>4.3</td>
+    </tr>
+    <tr>
+      <td>Semarang Timur</td>
+      <td>Kota Semarang</td>
+      <td>4.1</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>Gayamsari</td>
+      <td>Kota Semarang</td>
+      <td>4.1</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>Semarang Barat</td>
+      <td>Kota Semarang</td>
+      <td>4.1</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>Pedurungan</td>
+      <td>Kota Semarang</td>
+      <td>7.0</td>
+      <td>0.1</td>
+      <td>4.5</td>
+    </tr>
+    <tr>
+      <td>Semarang Tengah</td>
+      <td>Kota Semarang</td>
+      <td>4.1</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>Candisari</td>
+      <td>Kota Semarang</td>
+      <td>4.1</td>
+      <td>0.2</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>Tembalang</td>
+      <td>Kota Semarang</td>
+      <td>3.6</td>
+      <td>0.3</td>
+      <td>2.7</td>
+    </tr>
+    <tr>
+      <td>Sayung (Demak)</td>
+      <td>Sekitar Semarang</td>
+      <td>11.5</td>
+      <td>0.1</td>
+      <td>4.9</td>
+    </tr>
+    <tr>
+      <td>Kaliwungu (Kendal)</td>
+      <td>Sekitar Semarang</td>
+      <td>15.4</td>
+      <td>0.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <td>Ungaran (Kab. Semarang)</td>
+      <td>Sekitar Semarang</td>
+      <td>1.1</td>
+      <td>0.1</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table><h3>🌊 Muka laut depan Tanjung Emas – Open-Meteo Marine</h3><p>Tertinggi <b>1.13 m</b> pukul 03:00 WIB, terendah 0.14 m (tunggang pasang 0.99 m)</p><img src='grafik_pasang_laut.png' alt='Grafik muka laut 24 jam'><h3>🌤️ Prakiraan cuaca 24 jam – BMKG</h3><ul><li><b>Bandarharjo, Semarang Utara</b>: Cerah Berawan, Berawan, Cerah (hujan ±1.2 mm)</li><li><b>Sembungharjo, Genuk</b>: Cerah Berawan, Berawan, Cerah (hujan ±1.1 mm)</li></ul>
+    <p class="kecil">Data nyata hanya sebagai pembanding, tidak dipakai untuk menghitung skor.</p>
+  </section>
+  <section>
+    <h2>Riwayat 01-01-2024 s.d. 04-11-2026 <span class="label nyata">DATA NYATA · OPEN DATA</span></h2>
+    <img src='grafik_riwayat.png' alt='Grafik riwayat bulanan'><h3>🌧️ Ringkasan curah hujan per wilayah – arsip Open-Meteo</h3><table class="dataframe tabel">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Wilayah</th>
+      <th>Total 2024 (mm)</th>
+      <th>Total 2025 (mm)</th>
+      <th>Total 2026 (s.d. hari ini) (mm)</th>
+      <th>Maks harian (mm)</th>
+      <th>Tanggal maks</th>
+      <th>Hari hujan lebat (≥50 mm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Semarang Utara</td>
+      <td>1811</td>
+      <td>1965</td>
+      <td>1069</td>
+      <td>59.1</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Genuk</td>
+      <td>1754</td>
+      <td>2131</td>
+      <td>1076</td>
+      <td>58.7</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Tugu</td>
+      <td>2123</td>
+      <td>2304</td>
+      <td>1175</td>
+      <td>60.5</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Semarang Timur</td>
+      <td>1811</td>
+      <td>1965</td>
+      <td>1069</td>
+      <td>59.1</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Gayamsari</td>
+      <td>1811</td>
+      <td>1965</td>
+      <td>1069</td>
+      <td>59.1</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Semarang Barat</td>
+      <td>1811</td>
+      <td>1965</td>
+      <td>1069</td>
+      <td>59.1</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Pedurungan</td>
+      <td>1754</td>
+      <td>2131</td>
+      <td>1076</td>
+      <td>58.7</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Semarang Tengah</td>
+      <td>1811</td>
+      <td>1965</td>
+      <td>1069</td>
+      <td>59.1</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Candisari</td>
+      <td>1811</td>
+      <td>1965</td>
+      <td>1069</td>
+      <td>59.1</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Tembalang</td>
+      <td>2516</td>
+      <td>2726</td>
+      <td>1258</td>
+      <td>61.3</td>
+      <td>21-10-2025</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Sayung (Demak)</td>
+      <td>2404</td>
+      <td>2924</td>
+      <td>1547</td>
+      <td>64.3</td>
+      <td>23-01-2026</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Kaliwungu (Kendal)</td>
+      <td>2492</td>
+      <td>2899</td>
+      <td>1472</td>
+      <td>65.4</td>
+      <td>21-10-2025</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Ungaran (Kab. Semarang)</td>
+      <td>2664</td>
+      <td>3281</td>
+      <td>1341</td>
+      <td>65.6</td>
+      <td>21-10-2025</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table><p class='kecil'>Resolusi model ±9–25 km, jadi kecamatan yang berdekatan bisa bernilai sama.</p><h3>⛈️ 5 hari terbasah di Kota Semarang</h3><table class="dataframe tabel">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Tanggal</th>
+      <th>Hujan rata-rata kota (mm)</th>
+      <th>Hujan maks kecamatan (mm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>21-10-2025</td>
+      <td>59.4</td>
+      <td>61.3</td>
+    </tr>
+    <tr>
+      <td>09-03-2024</td>
+      <td>38.6</td>
+      <td>40.9</td>
+    </tr>
+    <tr>
+      <td>24-10-2025</td>
+      <td>36.6</td>
+      <td>44.9</td>
+    </tr>
+    <tr>
+      <td>23-01-2026</td>
+      <td>34.3</td>
+      <td>48.3</td>
+    </tr>
+    <tr>
+      <td>19-08-2025</td>
+      <td>32.0</td>
+      <td>34.0</td>
+    </tr>
+  </tbody>
+</table><h3>🌊 5 pasang laut tertinggi – arsip Open-Meteo Marine</h3><table class="dataframe tabel">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Tanggal</th>
+      <th>Muka laut maks (m)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>21-05-2025</td>
+      <td>1.35</td>
+    </tr>
+    <tr>
+      <td>01-06-2024</td>
+      <td>1.33</td>
+    </tr>
+    <tr>
+      <td>03-06-2025</td>
+      <td>1.32</td>
+    </tr>
+    <tr>
+      <td>22-05-2025</td>
+      <td>1.31</td>
+    </tr>
+    <tr>
+      <td>20-06-2026</td>
+      <td>1.31</td>
+    </tr>
+  </tbody>
+</table>
+    <p class="kecil">Data model cuaca (reanalisis ERA5), diambil ulang sampai hari ini setiap program dijalankan.</p>
+  </section>
+  <section>
+    <h2>Skor risiko berbasis data nyata <span class="label nyata">DATA NYATA</span>
+        <span class="label konsep">+ ASUMSI</span></h2>
+    <p>Rumus sama dengan skor simulasi: 40% hujan + 35% pasang laut + 25% penurunan tanah.
+    Hujan dan pasang laut memakai data nyata Open-Meteo; pasang dikalikan paparan rob kecamatan (asumsi
+    jarak ke pantai); penurunan tanah masih asumsi karena belum ada open data real-time.</p>
+    <h3>📡 Hari ini</h3><table class='tabel'><tr><th>Kecamatan</th><th>Hujan (mm)</th><th>Pasang (cm)</th><th>Penurunan tanah (asumsi)</th><th>Skor nyata</th><th>Status nyata</th><th>Status simulasi</th></tr><tr><td>Semarang Utara</td><td>3.0</td><td>113</td><td>9.0 cm/th</td><td><b>49.7</b></td><td><b style='color:#f2c200'>🟡 Waspada</b></td><td><b style='color:#d62828'>🔴 Awas</b></td></tr><tr><td>Genuk</td><td>4.5</td><td>113</td><td>8.0 cm/th</td><td><b>47.6</b></td><td><b style='color:#f2c200'>🟡 Waspada</b></td><td><b style='color:#d62828'>🔴 Awas</b></td></tr><tr><td>Tugu</td><td>4.3</td><td>102</td><td>6.0 cm/th</td><td><b>39.9</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#f07c00'>🟠 Siaga</b></td></tr><tr><td>Semarang Timur</td><td>3.0</td><td>79</td><td>5.0 cm/th</td><td><b>31.7</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#f07c00'>🟠 Siaga</b></td></tr><tr><td>Gayamsari</td><td>3.0</td><td>68</td><td>5.0 cm/th</td><td><b>29.2</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#f2c200'>🟡 Waspada</b></td></tr><tr><td>Semarang Barat</td><td>3.0</td><td>79</td><td>4.0 cm/th</td><td><b>29.2</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#f2c200'>🟡 Waspada</b></td></tr><tr><td>Pedurungan</td><td>4.5</td><td>45</td><td>4.0 cm/th</td><td><b>21.7</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#f2c200'>🟡 Waspada</b></td></tr><tr><td>Semarang Tengah</td><td>3.0</td><td>56</td><td>3.0 cm/th</td><td><b>21.4</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#f2c200'>🟡 Waspada</b></td></tr><tr><td>Candisari</td><td>3.0</td><td>0</td><td>1.0 cm/th</td><td><b>3.3</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td></tr><tr><td>Tembalang</td><td>2.7</td><td>0</td><td>0.5 cm/th</td><td><b>2.0</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td><td><b style='color:#2e9e44'>🟢 Aman</b></td></tr></table><h3>📚 Jumlah hari per status, 01-01-2024 s.d. 04-11-2026</h3><table class='tabel'><tr><th>Kecamatan</th><th><b style='color:#d62828'>🔴 Awas</b></th><th><b style='color:#f07c00'>🟠 Siaga</b></th><th><b style='color:#f2c200'>🟡 Waspada</b></th><th><b style='color:#2e9e44'>🟢 Aman</b></th><th>Skor tertinggi</th><th>Tanggal</th></tr><tr><td>Semarang Utara</td><td>0</td><td>1</td><td>1001</td><td>21</td><td>60.7</td><td>21-10-2025</td></tr><tr><td>Genuk</td><td>0</td><td>0</td><td>910</td><td>113</td><td>58.1</td><td>21-10-2025</td></tr><tr><td>Tugu</td><td>0</td><td>0</td><td>244</td><td>779</td><td>52.0</td><td>09-01-2026</td></tr><tr><td>Semarang Timur</td><td>0</td><td>0</td><td>3</td><td>1020</td><td>43.9</td><td>21-10-2025</td></tr><tr><td>Gayamsari</td><td>0</td><td>0</td><td>1</td><td>1022</td><td>41.7</td><td>21-10-2025</td></tr><tr><td>Semarang Barat</td><td>0</td><td>0</td><td>1</td><td>1022</td><td>41.4</td><td>21-10-2025</td></tr><tr><td>Pedurungan</td><td>0</td><td>0</td><td>0</td><td>1023</td><td>34.6</td><td>21-10-2025</td></tr><tr><td>Semarang Tengah</td><td>0</td><td>0</td><td>0</td><td>1023</td><td>34.5</td><td>21-10-2025</td></tr><tr><td>Candisari</td><td>0</td><td>0</td><td>0</td><td>1023</td><td>18.3</td><td>21-10-2025</td></tr><tr><td>Tembalang</td><td>0</td><td>0</td><td>0</td><td>1023</td><td>17.6</td><td>21-10-2025</td></tr></table>
+  </section>
+  <section>
+    <h2>Prediksi 7 hari ke depan & rencana aksi <span class="label nyata">DATA NYATA · PRAKIRAAN</span>
+        <span class="label konsep">+ ASUMSI</span></h2>
+    <div class='peringatan' style='border-left:6px solid #f2c200'><b>🟡 Tingkat ancaman tertinggi: Waspada</b><br>Puncak risiko diprediksi Kamis 05-11-2026 di Kec. Semarang Utara (skor 47.8, Waspada, ancaman utama rob); puncak pasang hari itu pukul 04:00 WIB. Wilayah terdampak: Semarang Utara, Genuk.</div><img src='grafik_prediksi.png' alt='Grafik prediksi'><h3>📅 Ringkasan per hari</h3><table class="dataframe tabel">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Tanggal</th>
+      <th>Hujan kota (mm)</th>
+      <th>Hujan hulu (mm)</th>
+      <th>Pasang maks (m)</th>
+      <th>Jam puncak pasang</th>
+      <th>Wilayah terdampak (Waspada ke atas)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rabu 04-11-2026</td>
+      <td>0.2</td>
+      <td>0.1</td>
+      <td>0.63</td>
+      <td>23:00</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>Kamis 05-11-2026</td>
+      <td>0.1</td>
+      <td>0.0</td>
+      <td>1.08</td>
+      <td>04:00</td>
+      <td>Semarang Utara, Genuk</td>
+    </tr>
+    <tr>
+      <td>Jumat 06-11-2026</td>
+      <td>3.4</td>
+      <td>2.0</td>
+      <td>0.98</td>
+      <td>04:00</td>
+      <td>Semarang Utara, Genuk</td>
+    </tr>
+    <tr>
+      <td>Sabtu 07-11-2026</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.86</td>
+      <td>04:00</td>
+      <td>Semarang Utara, Genuk</td>
+    </tr>
+    <tr>
+      <td>Minggu 08-11-2026</td>
+      <td>1.7</td>
+      <td>1.5</td>
+      <td>0.78</td>
+      <td>04:00</td>
+      <td>Semarang Utara</td>
+    </tr>
+    <tr>
+      <td>Senin 09-11-2026</td>
+      <td>5.7</td>
+      <td>3.3</td>
+      <td>0.71</td>
+      <td>02:00</td>
+      <td>Semarang Utara</td>
+    </tr>
+    <tr>
+      <td>Selasa 10-11-2026</td>
+      <td>8.3</td>
+      <td>4.6</td>
+      <td>0.70</td>
+      <td>02:00</td>
+      <td>Semarang Utara</td>
+    </tr>
+  </tbody>
+</table><h3>🧮 Skor risiko per kecamatan per hari</h3><table class='tabel'><tr><th>Kecamatan</th><th>Rabu 04-11</th><th>Kamis 05-11</th><th>Jumat 06-11</th><th>Sabtu 07-11</th><th>Minggu 08-11</th><th>Senin 09-11</th><th>Selasa 10-11</th></tr><tr><td>Semarang Utara</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>37</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>48</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>46</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>43</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>41</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>41</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>41</b><div class='kecil'>Waspada<br>rob</div></td></tr><tr><td>Genuk</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>35</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>45</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>44</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#f2c20022; border-left:4px solid #f2c200' title='Waspada – ancaman rob'><b>40</b><div class='kecil'>Waspada<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>39</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>38</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>39</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Tugu</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>28</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>38</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>37</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>33</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>32</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>32</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>31</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Semarang Timur</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>23</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>30</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>29</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>27</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>26</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>26</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>26</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Gayamsari</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>21</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>28</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>27</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>25</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>24</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>24</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>25</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Semarang Barat</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>20</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>28</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>27</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>24</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>23</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>23</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>24</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Pedurungan</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>16</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>20</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>20</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>18</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>18</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>18</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>19</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Semarang Tengah</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>15</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>20</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>20</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>18</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>17</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>17</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>18</b><div class='kecil'>Aman<br>rob</div></td></tr><tr><td>Candisari</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>3</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>3</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>3</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>3</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>3</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>4</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>5</b><div class='kecil'>Aman<br>banjir hujan</div></td></tr><tr><td>Tembalang</td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>1</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman rob'><b>1</b><div class='kecil'>Aman<br>rob</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>2</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>1</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>2</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>3</b><div class='kecil'>Aman<br>banjir hujan</div></td><td style='background:#2e9e4422; border-left:4px solid #2e9e44' title='Aman – ancaman banjir hujan'><b>2</b><div class='kecil'>Aman<br>banjir hujan</div></td></tr></table><h3>🏛️ Rencana aksi Wali Kota & jajaran</h3><table class='tabel'><tr><th>Waktu</th><th>Pelaksana</th><th>Tindakan</th></tr><tr><td>Hari ini</td><td><b>Wali Kota</b></td><td>Instruksikan seluruh OPD terkait siaga tingkat Waspada untuk Semarang Utara, Genuk.</td></tr><tr><td>Mulai hari ini</td><td><b>BPBD</b></td><td>Pantau hujan dan pasang laut tiap 3 jam; siapkan posko dan tim reaksi cepat di Semarang Utara, Genuk.</td></tr><tr><td>Paling lambat hari ini</td><td><b>Dinas Pekerjaan Umum</b></td><td>Uji coba rumah pompa dan pintu air, cek tanggul, bersihkan saluran di Semarang Utara, Genuk.</td></tr><tr><td>hari ini & Kamis 05-11-2026</td><td><b>Diskominfo</b></td><td>Kirim peringatan SIAGA ROB ke warga Semarang Utara, Genuk: H-1 dan 3 jam sebelum puncak pasang (04:00 WIB).</td></tr><tr><td>Sebelum Kamis 05-11-2026</td><td><b>Camat & Lurah</b></td><td>Gerakkan kerja bakti saluran; data warga rentan (lansia, disabilitas, ibu hamil, balita).</td></tr></table>
+    <p class="kecil">Prakiraan hujan dan muka laut dari Open-Meteo, diperbarui setiap program dijalankan. Paparan rob,
+    penurunan tanah, dan banjir kiriman dari hulu (Ungaran) adalah asumsi. Prakiraan makin tidak pasti untuk hari
+    yang makin jauh.</p>
+  </section>
+  <section>
+    <h2>Rekomendasi untuk Pemerintah Kota</h2>
+    <div class='rek'><b>🔴 Awas – Semarang Utara, Genuk</b><ul><li>Operasikan semua rumah pompa dan kerahkan pompa portabel ke titik genangan.</li><li>Buka posko pengungsian dan dapur umum; evakuasi lansia, anak-anak, dan penyandang disabilitas lebih dulu.</li><li>Alihkan lalu lintas dari jalan yang tergenang.</li><li>Siagakan tim SAR, ambulans, dan tenaga kesehatan.</li></ul><span class='kecil'>Dasar: skor risiko (data simulasi)</span></div><div class='rek'><b>🟠 Siaga – Tugu, Semarang Timur</b><ul><li>Cek kesiapan rumah pompa, pintu air, dan tanggul; siapkan pompa cadangan.</li><li>Bersihkan saluran dan gorong-gorong dari sampah.</li><li>Siapkan posko dan logistik; sebarkan peringatan lewat RT/RW dan media sosial.</li></ul><span class='kecil'>Dasar: skor risiko (data simulasi)</span></div><div class='rek'><b>🟡 Waspada – Gayamsari, Semarang Barat, Pedurungan, Semarang Tengah</b><ul><li>Pantau curah hujan dan pasang laut setiap 3 jam.</li><li>Gerakkan kerja bakti normalisasi saluran.</li><li>Ingatkan warga menyiapkan tas siaga.</li></ul><span class='kecil'>Dasar: skor risiko (data simulasi)</span></div><div class='rek'><b>🟢 Aman – Candisari, Tembalang</b><ul><li>Lakukan pemeliharaan rutin saluran dan pompa.</li><li>Edukasi warga tentang jalur evakuasi.</li></ul><span class='kecil'>Dasar: skor risiko (data simulasi)</span></div><div class='rek'><b>📅 Kalender kesiapsiagaan – Kota Semarang</b><ul><li>Puncak hujan biasanya bulan Jan, Des, Nov: bersihkan saluran dan siapkan pompa sebulan sebelumnya.</li><li>Pasang laut tertinggi biasanya bulan Jun, Mei, Des: siagakan tanggul, pintu air, dan posko di kecamatan pesisir.</li></ul><span class='kecil'>Dasar: riwayat hujan & pasang laut 01-01-2024 s.d. 04-11-2026 (data nyata)</span></div><div class='rek'><b>💡 Jangka panjang (gagasan smart city)</b><ul><li>Pasang sensor IoT tinggi muka air dan pasang laut di titik rawan agar data simulasi bisa diganti data real-time.</li><li>Kendalikan pengambilan air tanah untuk memperlambat penurunan tanah.</li><li>Bangun kolam retensi dan sistem polder di kecamatan pesisir untuk menampung air saat hujan bersamaan dengan pasang.</li><li>Perkuat tanggul pantai dan tanam mangrove sebagai sabuk hijau penahan rob.</li><li>Bagikan data risiko dalam format terbuka (CSV/JSON) lewat portal Satu Data Kota Semarang.</li><li>Hubungkan peringatan dini dengan kanal aduan warga (Lapor Wali) agar laporan genangan ikut terpantau.</li></ul></div>
+  </section>
+  <section>
+    <h2>Notifikasi warga <span class="label simulasi">DATA SIMULASI</span></h2>
+    <iframe src="notifikasi_warga.html" title="Notifikasi warga"></iframe>
+  </section>
+</main></body></html>

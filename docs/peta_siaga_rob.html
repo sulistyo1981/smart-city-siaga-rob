@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8ea86f23deab6ed58fcf7a2beafb9315 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;
+                background: white; padding: 10px 14px; border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0,0,0,.3); font-size: 13px;">
+      <b>SIAGA ROB Semarang</b><br>
+      <span style="color:#d62828">●</span> Awas<br>
+      <span style="color:#f07c00">●</span> Siaga<br>
+      <span style="color:#f2c200">●</span> Waspada<br>
+      <span style="color:#2e9e44">●</span> Aman<br>
+      <span style="color:#2a81cb">⌂</span> Posko pengungsian<br>
+      <i style="font-size:11px">Data simulasi</i>
+    </div>
+    
+    
+            <div class="folium-map" id="map_8ea86f23deab6ed58fcf7a2beafb9315" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8ea86f23deab6ed58fcf7a2beafb9315 = L.map(
+                "map_8ea86f23deab6ed58fcf7a2beafb9315",
+                {
+                    center: [-6.99, 110.42],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bfe5963349148d63631da363eaa4f450 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "\u0026copy; OpenStreetMap contributors, tiles: Humanitarian OSM Team, OSM France",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bfe5963349148d63631da363eaa4f450.addTo(map_8ea86f23deab6ed58fcf7a2beafb9315);
+        
+    
+            var tile_layer_2a1429580eab8a11628087d830871e5d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2a1429580eab8a11628087d830871e5d.addTo(map_8ea86f23deab6ed58fcf7a2beafb9315);
+        
+    
+            var feature_group_ba4cefef05a15b8edf7adcd24317aa66 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_bbac193e414585e65f0e58e082e70da1 = L.circleMarker(
+                [-6.958, 110.413],
+                {"bubblingMouseEvents": true, "color": "#d62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62828", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.9, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_b4d199c6bff9bf160056ccc1c687a70c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b5b0216f4274fd06270acd2e021999a7 = $(`<div id="html_b5b0216f4274fd06270acd2e021999a7" style="width: 100.0%; height: 100.0%;">         <b>Kec. Semarang Utara</b><br>         Status: <b style='color:#d62828'>AWAS</b><br>         Skor risiko: 87.2<br>         <hr style='margin:4px 0'>         Curah hujan: 120 mm<br>         Pasang laut: 140 cm<br>         Penurunan tanah: 9.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_b4d199c6bff9bf160056ccc1c687a70c.setContent(html_b5b0216f4274fd06270acd2e021999a7);
+            
+        
+
+        circle_marker_bbac193e414585e65f0e58e082e70da1.bindPopup(popup_b4d199c6bff9bf160056ccc1c687a70c)
+        ;
+
+        
+    
+    
+            circle_marker_bbac193e414585e65f0e58e082e70da1.bindTooltip(
+                `<div>
+                     Semarang Utara – Awas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60f146e0a456a696fa0fc3978f532ffb = L.circleMarker(
+                [-6.96, 110.47],
+                {"bubblingMouseEvents": true, "color": "#d62828", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d62828", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.1, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_47f3f7d6f75eb304b4877d27fe341386 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c2762178ee65de96c48cf27c2d142037 = $(`<div id="html_c2762178ee65de96c48cf27c2d142037" style="width: 100.0%; height: 100.0%;">         <b>Kec. Genuk</b><br>         Status: <b style='color:#d62828'>AWAS</b><br>         Skor risiko: 80.8<br>         <hr style='margin:4px 0'>         Curah hujan: 110 mm<br>         Pasang laut: 135 cm<br>         Penurunan tanah: 8.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_47f3f7d6f75eb304b4877d27fe341386.setContent(html_c2762178ee65de96c48cf27c2d142037);
+            
+        
+
+        circle_marker_60f146e0a456a696fa0fc3978f532ffb.bindPopup(popup_47f3f7d6f75eb304b4877d27fe341386)
+        ;
+
+        
+    
+    
+            circle_marker_60f146e0a456a696fa0fc3978f532ffb.bindTooltip(
+                `<div>
+                     Genuk – Awas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1669016464b7ad6e6d2772cbe8970c57 = L.circleMarker(
+                [-6.975, 110.345],
+                {"bubblingMouseEvents": true, "color": "#f07c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f07c00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.375, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_dcda2bf9426087a9308f3a05376857bd = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ab64d4e68f23d0d4ea76fbe41d27f4b9 = $(`<div id="html_ab64d4e68f23d0d4ea76fbe41d27f4b9" style="width: 100.0%; height: 100.0%;">         <b>Kec. Tugu</b><br>         Status: <b style='color:#f07c00'>SIAGA</b><br>         Skor risiko: 67.0<br>         <hr style='margin:4px 0'>         Curah hujan: 90 mm<br>         Pasang laut: 120 cm<br>         Penurunan tanah: 6.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_dcda2bf9426087a9308f3a05376857bd.setContent(html_ab64d4e68f23d0d4ea76fbe41d27f4b9);
+            
+        
+
+        circle_marker_1669016464b7ad6e6d2772cbe8970c57.bindPopup(popup_dcda2bf9426087a9308f3a05376857bd)
+        ;
+
+        
+    
+    
+            circle_marker_1669016464b7ad6e6d2772cbe8970c57.bindTooltip(
+                `<div>
+                     Tugu – Siaga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b89cee8b96b07c08afff6cdcc8dfdfb = L.circleMarker(
+                [-6.975, 110.435],
+                {"bubblingMouseEvents": true, "color": "#f07c00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f07c00", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.8125, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_cf4d3f7c6eaf16fc89d2a35a5f3e83a3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_14a56dba438dbfe2104a74c91c7e41ad = $(`<div id="html_14a56dba438dbfe2104a74c91c7e41ad" style="width: 100.0%; height: 100.0%;">         <b>Kec. Semarang Timur</b><br>         Status: <b style='color:#f07c00'>SIAGA</b><br>         Skor risiko: 62.5<br>         <hr style='margin:4px 0'>         Curah hujan: 100 mm<br>         Pasang laut: 100 cm<br>         Penurunan tanah: 5.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_cf4d3f7c6eaf16fc89d2a35a5f3e83a3.setContent(html_14a56dba438dbfe2104a74c91c7e41ad);
+            
+        
+
+        circle_marker_4b89cee8b96b07c08afff6cdcc8dfdfb.bindPopup(popup_cf4d3f7c6eaf16fc89d2a35a5f3e83a3)
+        ;
+
+        
+    
+    
+            circle_marker_4b89cee8b96b07c08afff6cdcc8dfdfb.bindTooltip(
+                `<div>
+                     Semarang Timur – Siaga
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b9699bc5e3ca12f5fdb5f2a0810df16 = L.circleMarker(
+                [-6.992, 110.455],
+                {"bubblingMouseEvents": true, "color": "#f2c200", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2c200", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.35, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_ae6d78580045b93a5af5feea362408d9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_763766cb4df8ebce955087960bfe5f90 = $(`<div id="html_763766cb4df8ebce955087960bfe5f90" style="width: 100.0%; height: 100.0%;">         <b>Kec. Gayamsari</b><br>         Status: <b style='color:#f2c200'>WASPADA</b><br>         Skor risiko: 58.8<br>         <hr style='margin:4px 0'>         Curah hujan: 95 mm<br>         Pasang laut: 90 cm<br>         Penurunan tanah: 5.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_ae6d78580045b93a5af5feea362408d9.setContent(html_763766cb4df8ebce955087960bfe5f90);
+            
+        
+
+        circle_marker_6b9699bc5e3ca12f5fdb5f2a0810df16.bindPopup(popup_ae6d78580045b93a5af5feea362408d9)
+        ;
+
+        
+    
+    
+            circle_marker_6b9699bc5e3ca12f5fdb5f2a0810df16.bindTooltip(
+                `<div>
+                     Gayamsari – Waspada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92686ead3c453b2e3b1938a92d8c6f1e = L.circleMarker(
+                [-6.985, 110.39],
+                {"bubblingMouseEvents": true, "color": "#f2c200", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2c200", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.85, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_a09193bdd5791d5f0bb0a3c3de3b7fc5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f5de4b90a0e04269fee3f7f7df619a8c = $(`<div id="html_f5de4b90a0e04269fee3f7f7df619a8c" style="width: 100.0%; height: 100.0%;">         <b>Kec. Semarang Barat</b><br>         Status: <b style='color:#f2c200'>WASPADA</b><br>         Skor risiko: 54.8<br>         <hr style='margin:4px 0'>         Curah hujan: 85 mm<br>         Pasang laut: 95 cm<br>         Penurunan tanah: 4.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_a09193bdd5791d5f0bb0a3c3de3b7fc5.setContent(html_f5de4b90a0e04269fee3f7f7df619a8c);
+            
+        
+
+        circle_marker_92686ead3c453b2e3b1938a92d8c6f1e.bindPopup(popup_a09193bdd5791d5f0bb0a3c3de3b7fc5)
+        ;
+
+        
+    
+    
+            circle_marker_92686ead3c453b2e3b1938a92d8c6f1e.bindTooltip(
+                `<div>
+                     Semarang Barat – Waspada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb3d383fb39d0b50471166b485080152 = L.circleMarker(
+                [-7.005, 110.48],
+                {"bubblingMouseEvents": true, "color": "#f2c200", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2c200", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_c1f18fe20e2cdc44f94af2d5ae30d48e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_240bac3744fb1e624c9d9d0a18a416b5 = $(`<div id="html_240bac3744fb1e624c9d9d0a18a416b5" style="width: 100.0%; height: 100.0%;">         <b>Kec. Pedurungan</b><br>         Status: <b style='color:#f2c200'>WASPADA</b><br>         Skor risiko: 48.0<br>         <hr style='margin:4px 0'>         Curah hujan: 90 mm<br>         Pasang laut: 60 cm<br>         Penurunan tanah: 4.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_c1f18fe20e2cdc44f94af2d5ae30d48e.setContent(html_240bac3744fb1e624c9d9d0a18a416b5);
+            
+        
+
+        circle_marker_eb3d383fb39d0b50471166b485080152.bindPopup(popup_c1f18fe20e2cdc44f94af2d5ae30d48e)
+        ;
+
+        
+    
+    
+            circle_marker_eb3d383fb39d0b50471166b485080152.bindTooltip(
+                `<div>
+                     Pedurungan – Waspada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_da37c96c6ff4b851702e8bbd5b5e027f = L.circleMarker(
+                [-6.98, 110.418],
+                {"bubblingMouseEvents": true, "color": "#f2c200", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f2c200", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.65, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_d9c138d4ca1da425124cf716748b515b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d2a95562e85ebc395c26d64bf0e8e776 = $(`<div id="html_d2a95562e85ebc395c26d64bf0e8e776" style="width: 100.0%; height: 100.0%;">         <b>Kec. Semarang Tengah</b><br>         Status: <b style='color:#f2c200'>WASPADA</b><br>         Skor risiko: 45.2<br>         <hr style='margin:4px 0'>         Curah hujan: 80 mm<br>         Pasang laut: 70 cm<br>         Penurunan tanah: 3.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_d9c138d4ca1da425124cf716748b515b.setContent(html_d2a95562e85ebc395c26d64bf0e8e776);
+            
+        
+
+        circle_marker_da37c96c6ff4b851702e8bbd5b5e027f.bindPopup(popup_d9c138d4ca1da425124cf716748b515b)
+        ;
+
+        
+    
+    
+            circle_marker_da37c96c6ff4b851702e8bbd5b5e027f.bindTooltip(
+                `<div>
+                     Semarang Tengah – Waspada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f96759554427c6050108d9458a4b8214 = L.circleMarker(
+                [-7.015, 110.425],
+                {"bubblingMouseEvents": true, "color": "#2e9e44", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9e44", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.9375, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_c7345cdf713b780d7781b325d345c814 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d5c3fefd237b7d93f0a34a2adf5fa12d = $(`<div id="html_d5c3fefd237b7d93f0a34a2adf5fa12d" style="width: 100.0%; height: 100.0%;">         <b>Kec. Candisari</b><br>         Status: <b style='color:#2e9e44'>AMAN</b><br>         Skor risiko: 23.5<br>         <hr style='margin:4px 0'>         Curah hujan: 70 mm<br>         Pasang laut: 10 cm<br>         Penurunan tanah: 1.0 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_c7345cdf713b780d7781b325d345c814.setContent(html_d5c3fefd237b7d93f0a34a2adf5fa12d);
+            
+        
+
+        circle_marker_f96759554427c6050108d9458a4b8214.bindPopup(popup_c7345cdf713b780d7781b325d345c814)
+        ;
+
+        
+    
+    
+            circle_marker_f96759554427c6050108d9458a4b8214.bindTooltip(
+                `<div>
+                     Candisari – Aman
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_496d16dcc2283d73a76198b71c7be4a8 = L.circleMarker(
+                [-7.06, 110.44],
+                {"bubblingMouseEvents": true, "color": "#2e9e44", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2e9e44", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.6625, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ba4cefef05a15b8edf7adcd24317aa66);
+        
+    
+        var popup_7acb5bc0f9b70ad29749da7114c7dab4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e928c553d0e0721e2a69fc8a119185dd = $(`<div id="html_e928c553d0e0721e2a69fc8a119185dd" style="width: 100.0%; height: 100.0%;">         <b>Kec. Tembalang</b><br>         Status: <b style='color:#2e9e44'>AMAN</b><br>         Skor risiko: 21.3<br>         <hr style='margin:4px 0'>         Curah hujan: 75 mm<br>         Pasang laut: 0 cm<br>         Penurunan tanah: 0.5 cm/tahun<br>         <i style='font-size:10px'>Data simulasi</i>         </div>`)[0];
+                popup_7acb5bc0f9b70ad29749da7114c7dab4.setContent(html_e928c553d0e0721e2a69fc8a119185dd);
+            
+        
+
+        circle_marker_496d16dcc2283d73a76198b71c7be4a8.bindPopup(popup_7acb5bc0f9b70ad29749da7114c7dab4)
+        ;
+
+        
+    
+    
+            circle_marker_496d16dcc2283d73a76198b71c7be4a8.bindTooltip(
+                `<div>
+                     Tembalang – Aman
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_ba4cefef05a15b8edf7adcd24317aa66.addTo(map_8ea86f23deab6ed58fcf7a2beafb9315);
+        
+    
+            var feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d47b36ea3ac1073d292aa72e69f5dc97 = L.marker(
+                [-6.97, 110.413],
+                {
+}
+            ).addTo(feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf);
+        
+    
+            var icon_bc36f82efdadf2f851884da6e9bafd7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4236353f4280fab500e1afbfca75059 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_24f05e222c9df5a75776727f468b9923 = $(`<div id="html_24f05e222c9df5a75776727f468b9923" style="width: 100.0%; height: 100.0%;">         <b>Posko Pengungsian Kec. Semarang Utara</b><br>         Kapasitas: ±200 orang<br>         Fasilitas: dapur umum, pos kesehatan<br>         <a href='https://www.google.com/maps/dir/?api=1&destination=-6.97,110.413' target='_blank'>         🧭 Rute ke posko (Google Maps)</a><br>         <i style='font-size:10px'>Lokasi simulasi</i>         </div>`)[0];
+                popup_b4236353f4280fab500e1afbfca75059.setContent(html_24f05e222c9df5a75776727f468b9923);
+            
+        
+
+        marker_d47b36ea3ac1073d292aa72e69f5dc97.bindPopup(popup_b4236353f4280fab500e1afbfca75059)
+        ;
+
+        
+    
+    
+            marker_d47b36ea3ac1073d292aa72e69f5dc97.bindTooltip(
+                `<div>
+                     Posko – Semarang Utara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d47b36ea3ac1073d292aa72e69f5dc97.setIcon(icon_bc36f82efdadf2f851884da6e9bafd7f);
+            
+    
+            var marker_d16703993014a777cd658cd670aaac51 = L.marker(
+                [-6.9719999999999995, 110.47],
+                {
+}
+            ).addTo(feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf);
+        
+    
+            var icon_d7159a10e2b9180199860e9ed11fef37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ddd806473aa96ffbe96351bd726b8861 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d9232934a7e3ce8767bc2fc9658d7acd = $(`<div id="html_d9232934a7e3ce8767bc2fc9658d7acd" style="width: 100.0%; height: 100.0%;">         <b>Posko Pengungsian Kec. Genuk</b><br>         Kapasitas: ±200 orang<br>         Fasilitas: dapur umum, pos kesehatan<br>         <a href='https://www.google.com/maps/dir/?api=1&destination=-6.9719999999999995,110.47' target='_blank'>         🧭 Rute ke posko (Google Maps)</a><br>         <i style='font-size:10px'>Lokasi simulasi</i>         </div>`)[0];
+                popup_ddd806473aa96ffbe96351bd726b8861.setContent(html_d9232934a7e3ce8767bc2fc9658d7acd);
+            
+        
+
+        marker_d16703993014a777cd658cd670aaac51.bindPopup(popup_ddd806473aa96ffbe96351bd726b8861)
+        ;
+
+        
+    
+    
+            marker_d16703993014a777cd658cd670aaac51.bindTooltip(
+                `<div>
+                     Posko – Genuk
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d16703993014a777cd658cd670aaac51.setIcon(icon_d7159a10e2b9180199860e9ed11fef37);
+            
+    
+            var marker_0830c4cf00e8198b196778b04d7530df = L.marker(
+                [-6.986999999999999, 110.345],
+                {
+}
+            ).addTo(feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf);
+        
+    
+            var icon_57dfec1f73180ed94561fe075482bcb1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b303f2eb2427e581cf729f0a041307ac = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_75e34f79a081174ab6e9491cb5706542 = $(`<div id="html_75e34f79a081174ab6e9491cb5706542" style="width: 100.0%; height: 100.0%;">         <b>Posko Pengungsian Kec. Tugu</b><br>         Kapasitas: ±200 orang<br>         Fasilitas: dapur umum, pos kesehatan<br>         <a href='https://www.google.com/maps/dir/?api=1&destination=-6.986999999999999,110.345' target='_blank'>         🧭 Rute ke posko (Google Maps)</a><br>         <i style='font-size:10px'>Lokasi simulasi</i>         </div>`)[0];
+                popup_b303f2eb2427e581cf729f0a041307ac.setContent(html_75e34f79a081174ab6e9491cb5706542);
+            
+        
+
+        marker_0830c4cf00e8198b196778b04d7530df.bindPopup(popup_b303f2eb2427e581cf729f0a041307ac)
+        ;
+
+        
+    
+    
+            marker_0830c4cf00e8198b196778b04d7530df.bindTooltip(
+                `<div>
+                     Posko – Tugu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0830c4cf00e8198b196778b04d7530df.setIcon(icon_57dfec1f73180ed94561fe075482bcb1);
+            
+    
+            var marker_d4f493e34ad3bf3b9eb3832aba9644aa = L.marker(
+                [-6.986999999999999, 110.435],
+                {
+}
+            ).addTo(feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf);
+        
+    
+            var icon_7b2d5dbb98f0e8fce017922bf27f4b91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_514da37c9556b2492a5b5683a13366ad = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ef9bf049241bd613523516b415d7e0da = $(`<div id="html_ef9bf049241bd613523516b415d7e0da" style="width: 100.0%; height: 100.0%;">         <b>Posko Pengungsian Kec. Semarang Timur</b><br>         Kapasitas: ±200 orang<br>         Fasilitas: dapur umum, pos kesehatan<br>         <a href='https://www.google.com/maps/dir/?api=1&destination=-6.986999999999999,110.435' target='_blank'>         🧭 Rute ke posko (Google Maps)</a><br>         <i style='font-size:10px'>Lokasi simulasi</i>         </div>`)[0];
+                popup_514da37c9556b2492a5b5683a13366ad.setContent(html_ef9bf049241bd613523516b415d7e0da);
+            
+        
+
+        marker_d4f493e34ad3bf3b9eb3832aba9644aa.bindPopup(popup_514da37c9556b2492a5b5683a13366ad)
+        ;
+
+        
+    
+    
+            marker_d4f493e34ad3bf3b9eb3832aba9644aa.bindTooltip(
+                `<div>
+                     Posko – Semarang Timur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4f493e34ad3bf3b9eb3832aba9644aa.setIcon(icon_7b2d5dbb98f0e8fce017922bf27f4b91);
+            
+    
+            feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf.addTo(map_8ea86f23deab6ed58fcf7a2beafb9315);
+        
+    
+            var layer_control_63ac7178d4a91116a48a64b1f4eb22c3_layers = {
+                base_layers : {
+                    "Peta OSM Humanitarian" : tile_layer_bfe5963349148d63631da363eaa4f450,
+                    "Peta Esri (cadangan)" : tile_layer_2a1429580eab8a11628087d830871e5d,
+                },
+                overlays :  {
+                    "Risiko per kecamatan (simulasi)" : feature_group_ba4cefef05a15b8edf7adcd24317aa66,
+                    "Posko pengungsian (simulasi)" : feature_group_b8acd394cb23ca6fb22c28cf9f6dbfdf,
+                },
+            };
+            let layer_control_63ac7178d4a91116a48a64b1f4eb22c3 = L.control.layers(
+                layer_control_63ac7178d4a91116a48a64b1f4eb22c3_layers.base_layers,
+                layer_control_63ac7178d4a91116a48a64b1f4eb22c3_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_8ea86f23deab6ed58fcf7a2beafb9315);
+
+        
+    
+            map_8ea86f23deab6ed58fcf7a2beafb9315.fitBounds(
+                [[-6.958, 110.413], [-6.96, 110.47], [-6.975, 110.345], [-6.975, 110.435], [-6.992, 110.455], [-6.985, 110.39], [-7.005, 110.48], [-6.98, 110.418], [-7.015, 110.425], [-7.06, 110.44]],
+                {"padding": [30, 30]}
+            );
+        
+</script>
+</html>

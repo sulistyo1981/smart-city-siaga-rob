@@ -1,0 +1,809 @@
+{
+  "judul": "SIAGA ROB Semarang – Skor Risiko Banjir & Rob",
+  "keterangan": "Skor risiko memakai DATA SIMULASI untuk tugas presentasi, bukan data resmi. Bagian data_nyata berasal dari open data Open-Meteo dan BMKG.",
+  "dibuat": "04-11-2026 19:37 WIB",
+  "rumus": "skor = (40% hujan/150 + 35% pasang/150 + 25% penurunan_tanah/10) x 100",
+  "skor_risiko_simulasi": [
+    {
+      "kecamatan": "Semarang Utara",
+      "curah_hujan_mm": 120,
+      "pasang_laut_cm": 140,
+      "penurunan_tanah": 9.0,
+      "skor_risiko": 87.2,
+      "status": "Awas",
+      "lat": -6.958,
+      "lon": 110.413
+    },
+    {
+      "kecamatan": "Genuk",
+      "curah_hujan_mm": 110,
+      "pasang_laut_cm": 135,
+      "penurunan_tanah": 8.0,
+      "skor_risiko": 80.8,
+      "status": "Awas",
+      "lat": -6.96,
+      "lon": 110.47
+    },
+    {
+      "kecamatan": "Tugu",
+      "curah_hujan_mm": 90,
+      "pasang_laut_cm": 120,
+      "penurunan_tanah": 6.0,
+      "skor_risiko": 67.0,
+      "status": "Siaga",
+      "lat": -6.975,
+      "lon": 110.345
+    },
+    {
+      "kecamatan": "Semarang Timur",
+      "curah_hujan_mm": 100,
+      "pasang_laut_cm": 100,
+      "penurunan_tanah": 5.0,
+      "skor_risiko": 62.5,
+      "status": "Siaga",
+      "lat": -6.975,
+      "lon": 110.435
+    },
+    {
+      "kecamatan": "Gayamsari",
+      "curah_hujan_mm": 95,
+      "pasang_laut_cm": 90,
+      "penurunan_tanah": 5.0,
+      "skor_risiko": 58.8,
+      "status": "Waspada",
+      "lat": -6.992,
+      "lon": 110.455
+    },
+    {
+      "kecamatan": "Semarang Barat",
+      "curah_hujan_mm": 85,
+      "pasang_laut_cm": 95,
+      "penurunan_tanah": 4.0,
+      "skor_risiko": 54.8,
+      "status": "Waspada",
+      "lat": -6.985,
+      "lon": 110.39
+    },
+    {
+      "kecamatan": "Pedurungan",
+      "curah_hujan_mm": 90,
+      "pasang_laut_cm": 60,
+      "penurunan_tanah": 4.0,
+      "skor_risiko": 48.0,
+      "status": "Waspada",
+      "lat": -7.005,
+      "lon": 110.48
+    },
+    {
+      "kecamatan": "Semarang Tengah",
+      "curah_hujan_mm": 80,
+      "pasang_laut_cm": 70,
+      "penurunan_tanah": 3.0,
+      "skor_risiko": 45.2,
+      "status": "Waspada",
+      "lat": -6.98,
+      "lon": 110.418
+    },
+    {
+      "kecamatan": "Candisari",
+      "curah_hujan_mm": 70,
+      "pasang_laut_cm": 10,
+      "penurunan_tanah": 1.0,
+      "skor_risiko": 23.5,
+      "status": "Aman",
+      "lat": -7.015,
+      "lon": 110.425
+    },
+    {
+      "kecamatan": "Tembalang",
+      "curah_hujan_mm": 75,
+      "pasang_laut_cm": 0,
+      "penurunan_tanah": 0.5,
+      "skor_risiko": 21.3,
+      "status": "Aman",
+      "lat": -7.06,
+      "lon": 110.44
+    }
+  ],
+  "data_nyata": {
+    "hujan_open_meteo": [
+      {
+        "kecamatan": "Semarang Utara",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 4.1,
+        "hujan_hari_ini_mm": 0.2,
+        "prakiraan_maks_mm": 3.0
+      },
+      {
+        "kecamatan": "Genuk",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 7.0,
+        "hujan_hari_ini_mm": 0.1,
+        "prakiraan_maks_mm": 4.5
+      },
+      {
+        "kecamatan": "Tugu",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 11.3,
+        "hujan_hari_ini_mm": 0.0,
+        "prakiraan_maks_mm": 4.3
+      },
+      {
+        "kecamatan": "Semarang Timur",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 4.1,
+        "hujan_hari_ini_mm": 0.2,
+        "prakiraan_maks_mm": 3.0
+      },
+      {
+        "kecamatan": "Gayamsari",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 4.1,
+        "hujan_hari_ini_mm": 0.2,
+        "prakiraan_maks_mm": 3.0
+      },
+      {
+        "kecamatan": "Semarang Barat",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 4.1,
+        "hujan_hari_ini_mm": 0.2,
+        "prakiraan_maks_mm": 3.0
+      },
+      {
+        "kecamatan": "Pedurungan",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 7.0,
+        "hujan_hari_ini_mm": 0.1,
+        "prakiraan_maks_mm": 4.5
+      },
+      {
+        "kecamatan": "Semarang Tengah",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 4.1,
+        "hujan_hari_ini_mm": 0.2,
+        "prakiraan_maks_mm": 3.0
+      },
+      {
+        "kecamatan": "Candisari",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 4.1,
+        "hujan_hari_ini_mm": 0.2,
+        "prakiraan_maks_mm": 3.0
+      },
+      {
+        "kecamatan": "Tembalang",
+        "kelompok": "Kota Semarang",
+        "hujan_3hari_lalu_mm": 3.6,
+        "hujan_hari_ini_mm": 0.3,
+        "prakiraan_maks_mm": 2.7
+      },
+      {
+        "kecamatan": "Sayung (Demak)",
+        "kelompok": "Sekitar Semarang",
+        "hujan_3hari_lalu_mm": 11.5,
+        "hujan_hari_ini_mm": 0.1,
+        "prakiraan_maks_mm": 4.9
+      },
+      {
+        "kecamatan": "Kaliwungu (Kendal)",
+        "kelompok": "Sekitar Semarang",
+        "hujan_3hari_lalu_mm": 15.4,
+        "hujan_hari_ini_mm": 0.0,
+        "prakiraan_maks_mm": 5.0
+      },
+      {
+        "kecamatan": "Ungaran (Kab. Semarang)",
+        "kelompok": "Sekitar Semarang",
+        "hujan_3hari_lalu_mm": 1.1,
+        "hujan_hari_ini_mm": 0.1,
+        "prakiraan_maks_mm": 2.0
+      }
+    ],
+    "muka_laut_open_meteo": {
+      "tertinggi_m": 1.13,
+      "jam_tertinggi": "03:00",
+      "terendah_m": 0.14,
+      "tunggang_m": 0.99,
+      "jam": [
+        "00:00",
+        "01:00",
+        "02:00",
+        "03:00",
+        "04:00",
+        "05:00",
+        "06:00",
+        "07:00",
+        "08:00",
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
+      ],
+      "tinggi": [
+        0.81,
+        0.96,
+        1.07,
+        1.13,
+        1.13,
+        1.04,
+        0.86,
+        0.65,
+        0.45,
+        0.28,
+        0.17,
+        0.14,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.58,
+        0.62,
+        0.61,
+        0.55,
+        0.52,
+        0.52,
+        0.55,
+        0.63
+      ]
+    },
+    "cuaca_bmkg": [
+      {
+        "kelurahan": "Bandarharjo, Semarang Utara",
+        "cuaca_24_jam": "Cerah Berawan, Berawan, Cerah",
+        "hujan_24_jam_mm": 1.2
+      },
+      {
+        "kelurahan": "Sembungharjo, Genuk",
+        "cuaca_24_jam": "Cerah Berawan, Berawan, Cerah",
+        "hujan_24_jam_mm": 1.1
+      }
+    ],
+    "riwayat": {
+      "periode": "01-01-2024 s.d. 04-11-2026",
+      "ringkasan_hujan": [
+        {
+          "wilayah": "Semarang Utara",
+          "total_2024_mm": 1811,
+          "total_2025_mm": 1965,
+          "total_2026_mm": 1069,
+          "maks_harian_mm": 59.1,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Genuk",
+          "total_2024_mm": 1754,
+          "total_2025_mm": 2131,
+          "total_2026_mm": 1076,
+          "maks_harian_mm": 58.7,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Tugu",
+          "total_2024_mm": 2123,
+          "total_2025_mm": 2304,
+          "total_2026_mm": 1175,
+          "maks_harian_mm": 60.5,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Semarang Timur",
+          "total_2024_mm": 1811,
+          "total_2025_mm": 1965,
+          "total_2026_mm": 1069,
+          "maks_harian_mm": 59.1,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Gayamsari",
+          "total_2024_mm": 1811,
+          "total_2025_mm": 1965,
+          "total_2026_mm": 1069,
+          "maks_harian_mm": 59.1,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Semarang Barat",
+          "total_2024_mm": 1811,
+          "total_2025_mm": 1965,
+          "total_2026_mm": 1069,
+          "maks_harian_mm": 59.1,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Pedurungan",
+          "total_2024_mm": 1754,
+          "total_2025_mm": 2131,
+          "total_2026_mm": 1076,
+          "maks_harian_mm": 58.7,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Semarang Tengah",
+          "total_2024_mm": 1811,
+          "total_2025_mm": 1965,
+          "total_2026_mm": 1069,
+          "maks_harian_mm": 59.1,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Candisari",
+          "total_2024_mm": 1811,
+          "total_2025_mm": 1965,
+          "total_2026_mm": 1069,
+          "maks_harian_mm": 59.1,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Tembalang",
+          "total_2024_mm": 2516,
+          "total_2025_mm": 2726,
+          "total_2026_mm": 1258,
+          "maks_harian_mm": 61.3,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 1
+        },
+        {
+          "wilayah": "Sayung (Demak)",
+          "total_2024_mm": 2404,
+          "total_2025_mm": 2924,
+          "total_2026_mm": 1547,
+          "maks_harian_mm": 64.3,
+          "tanggal_maks": "23-01-2026",
+          "hari_hujan_lebat": 3
+        },
+        {
+          "wilayah": "Kaliwungu (Kendal)",
+          "total_2024_mm": 2492,
+          "total_2025_mm": 2899,
+          "total_2026_mm": 1472,
+          "maks_harian_mm": 65.4,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 3
+        },
+        {
+          "wilayah": "Ungaran (Kab. Semarang)",
+          "total_2024_mm": 2664,
+          "total_2025_mm": 3281,
+          "total_2026_mm": 1341,
+          "maks_harian_mm": 65.6,
+          "tanggal_maks": "21-10-2025",
+          "hari_hujan_lebat": 3
+        }
+      ],
+      "hari_terbasah": [
+        {
+          "tanggal": "21-10-2025",
+          "hujan_rata_kota_mm": 59.4,
+          "hujan_maks_kecamatan_mm": 61.3
+        },
+        {
+          "tanggal": "09-03-2024",
+          "hujan_rata_kota_mm": 38.6,
+          "hujan_maks_kecamatan_mm": 40.9
+        },
+        {
+          "tanggal": "24-10-2025",
+          "hujan_rata_kota_mm": 36.6,
+          "hujan_maks_kecamatan_mm": 44.9
+        },
+        {
+          "tanggal": "23-01-2026",
+          "hujan_rata_kota_mm": 34.3,
+          "hujan_maks_kecamatan_mm": 48.3
+        },
+        {
+          "tanggal": "19-08-2025",
+          "hujan_rata_kota_mm": 32.0,
+          "hujan_maks_kecamatan_mm": 34.0
+        }
+      ],
+      "pasang_tertinggi": [
+        {
+          "tanggal": "21-05-2025",
+          "muka_laut_maks_m": 1.35
+        },
+        {
+          "tanggal": "01-06-2024",
+          "muka_laut_maks_m": 1.33
+        },
+        {
+          "tanggal": "03-06-2025",
+          "muka_laut_maks_m": 1.32
+        },
+        {
+          "tanggal": "22-05-2025",
+          "muka_laut_maks_m": 1.31
+        },
+        {
+          "tanggal": "20-06-2026",
+          "muka_laut_maks_m": 1.31
+        }
+      ],
+      "bulan_rawan_hujan": [
+        "Jan",
+        "Des",
+        "Nov"
+      ],
+      "bulan_rawan_rob": [
+        "Jun",
+        "Mei",
+        "Des"
+      ]
+    },
+    "skor_nyata_hari_ini": [
+      {
+        "kecamatan": "Semarang Utara",
+        "hujan_nyata_mm": 3.0,
+        "pasang_nyata_cm": 113.0,
+        "penurunan_tanah": 9.0,
+        "skor_nyata": 49.7,
+        "status_nyata": "Waspada",
+        "status_simulasi": "Awas"
+      },
+      {
+        "kecamatan": "Genuk",
+        "hujan_nyata_mm": 4.5,
+        "pasang_nyata_cm": 113.0,
+        "penurunan_tanah": 8.0,
+        "skor_nyata": 47.6,
+        "status_nyata": "Waspada",
+        "status_simulasi": "Awas"
+      },
+      {
+        "kecamatan": "Tugu",
+        "hujan_nyata_mm": 4.3,
+        "pasang_nyata_cm": 102.0,
+        "penurunan_tanah": 6.0,
+        "skor_nyata": 39.9,
+        "status_nyata": "Aman",
+        "status_simulasi": "Siaga"
+      },
+      {
+        "kecamatan": "Semarang Timur",
+        "hujan_nyata_mm": 3.0,
+        "pasang_nyata_cm": 79.0,
+        "penurunan_tanah": 5.0,
+        "skor_nyata": 31.7,
+        "status_nyata": "Aman",
+        "status_simulasi": "Siaga"
+      },
+      {
+        "kecamatan": "Gayamsari",
+        "hujan_nyata_mm": 3.0,
+        "pasang_nyata_cm": 68.0,
+        "penurunan_tanah": 5.0,
+        "skor_nyata": 29.2,
+        "status_nyata": "Aman",
+        "status_simulasi": "Waspada"
+      },
+      {
+        "kecamatan": "Semarang Barat",
+        "hujan_nyata_mm": 3.0,
+        "pasang_nyata_cm": 79.0,
+        "penurunan_tanah": 4.0,
+        "skor_nyata": 29.2,
+        "status_nyata": "Aman",
+        "status_simulasi": "Waspada"
+      },
+      {
+        "kecamatan": "Pedurungan",
+        "hujan_nyata_mm": 4.5,
+        "pasang_nyata_cm": 45.0,
+        "penurunan_tanah": 4.0,
+        "skor_nyata": 21.7,
+        "status_nyata": "Aman",
+        "status_simulasi": "Waspada"
+      },
+      {
+        "kecamatan": "Semarang Tengah",
+        "hujan_nyata_mm": 3.0,
+        "pasang_nyata_cm": 56.0,
+        "penurunan_tanah": 3.0,
+        "skor_nyata": 21.4,
+        "status_nyata": "Aman",
+        "status_simulasi": "Waspada"
+      },
+      {
+        "kecamatan": "Candisari",
+        "hujan_nyata_mm": 3.0,
+        "pasang_nyata_cm": 0.0,
+        "penurunan_tanah": 1.0,
+        "skor_nyata": 3.3,
+        "status_nyata": "Aman",
+        "status_simulasi": "Aman"
+      },
+      {
+        "kecamatan": "Tembalang",
+        "hujan_nyata_mm": 2.7,
+        "pasang_nyata_cm": 0.0,
+        "penurunan_tanah": 0.5,
+        "skor_nyata": 2.0,
+        "status_nyata": "Aman",
+        "status_simulasi": "Aman"
+      }
+    ],
+    "jumlah_hari_per_status": [
+      {
+        "kecamatan": "Semarang Utara",
+        "hari_awas": 0,
+        "hari_siaga": 1,
+        "hari_waspada": 1001,
+        "hari_aman": 21,
+        "skor_maks": 60.7,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Genuk",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 910,
+        "hari_aman": 113,
+        "skor_maks": 58.1,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Tugu",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 244,
+        "hari_aman": 779,
+        "skor_maks": 52.0,
+        "tanggal_skor_maks": "09-01-2026"
+      },
+      {
+        "kecamatan": "Semarang Timur",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 3,
+        "hari_aman": 1020,
+        "skor_maks": 43.9,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Gayamsari",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 1,
+        "hari_aman": 1022,
+        "skor_maks": 41.7,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Semarang Barat",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 1,
+        "hari_aman": 1022,
+        "skor_maks": 41.4,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Pedurungan",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 0,
+        "hari_aman": 1023,
+        "skor_maks": 34.6,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Semarang Tengah",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 0,
+        "hari_aman": 1023,
+        "skor_maks": 34.5,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Candisari",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 0,
+        "hari_aman": 1023,
+        "skor_maks": 18.3,
+        "tanggal_skor_maks": "21-10-2025"
+      },
+      {
+        "kecamatan": "Tembalang",
+        "hari_awas": 0,
+        "hari_siaga": 0,
+        "hari_waspada": 0,
+        "hari_aman": 1023,
+        "skor_maks": 17.6,
+        "tanggal_skor_maks": "21-10-2025"
+      }
+    ],
+    "paparan_rob_asumsi": {
+      "Semarang Utara": 1.0,
+      "Genuk": 1.0,
+      "Tugu": 0.9,
+      "Semarang Barat": 0.7,
+      "Semarang Timur": 0.7,
+      "Gayamsari": 0.6,
+      "Semarang Tengah": 0.5,
+      "Pedurungan": 0.4,
+      "Candisari": 0.0,
+      "Tembalang": 0.0
+    },
+    "prediksi_7_hari": {
+      "ringkasan_harian": [
+        {
+          "tanggal": "Rabu 04-11-2026",
+          "hujan_kota_mm": 0.2,
+          "hujan_hulu_mm": 0.1,
+          "pasang_maks_m": 0.63,
+          "jam_puncak_pasang": "23:00",
+          "wilayah_terdampak": "–"
+        },
+        {
+          "tanggal": "Kamis 05-11-2026",
+          "hujan_kota_mm": 0.1,
+          "hujan_hulu_mm": 0.0,
+          "pasang_maks_m": 1.08,
+          "jam_puncak_pasang": "04:00",
+          "wilayah_terdampak": "Semarang Utara, Genuk"
+        },
+        {
+          "tanggal": "Jumat 06-11-2026",
+          "hujan_kota_mm": 3.4,
+          "hujan_hulu_mm": 2.0,
+          "pasang_maks_m": 0.98,
+          "jam_puncak_pasang": "04:00",
+          "wilayah_terdampak": "Semarang Utara, Genuk"
+        },
+        {
+          "tanggal": "Sabtu 07-11-2026",
+          "hujan_kota_mm": 1.0,
+          "hujan_hulu_mm": 1.0,
+          "pasang_maks_m": 0.86,
+          "jam_puncak_pasang": "04:00",
+          "wilayah_terdampak": "Semarang Utara, Genuk"
+        },
+        {
+          "tanggal": "Minggu 08-11-2026",
+          "hujan_kota_mm": 1.7,
+          "hujan_hulu_mm": 1.5,
+          "pasang_maks_m": 0.78,
+          "jam_puncak_pasang": "04:00",
+          "wilayah_terdampak": "Semarang Utara"
+        },
+        {
+          "tanggal": "Senin 09-11-2026",
+          "hujan_kota_mm": 5.7,
+          "hujan_hulu_mm": 3.3,
+          "pasang_maks_m": 0.71,
+          "jam_puncak_pasang": "02:00",
+          "wilayah_terdampak": "Semarang Utara"
+        },
+        {
+          "tanggal": "Selasa 10-11-2026",
+          "hujan_kota_mm": 8.3,
+          "hujan_hulu_mm": 4.6,
+          "pasang_maks_m": 0.7,
+          "jam_puncak_pasang": "02:00",
+          "wilayah_terdampak": "Semarang Utara"
+        }
+      ],
+      "rencana_aksi": {
+        "level": "Waspada",
+        "wilayah": "Semarang Utara, Genuk",
+        "ringkasan": "Puncak risiko diprediksi Kamis 05-11-2026 di Kec. Semarang Utara (skor 47.8, Waspada, ancaman utama rob); puncak pasang hari itu pukul 04:00 WIB. Wilayah terdampak: Semarang Utara, Genuk.",
+        "aksi": [
+          {
+            "pelaksana": "Wali Kota",
+            "tindakan": "Instruksikan seluruh OPD terkait siaga tingkat Waspada untuk Semarang Utara, Genuk.",
+            "waktu": "Hari ini"
+          },
+          {
+            "pelaksana": "BPBD",
+            "tindakan": "Pantau hujan dan pasang laut tiap 3 jam; siapkan posko dan tim reaksi cepat di Semarang Utara, Genuk.",
+            "waktu": "Mulai hari ini"
+          },
+          {
+            "pelaksana": "Dinas Pekerjaan Umum",
+            "tindakan": "Uji coba rumah pompa dan pintu air, cek tanggul, bersihkan saluran di Semarang Utara, Genuk.",
+            "waktu": "Paling lambat hari ini"
+          },
+          {
+            "pelaksana": "Diskominfo",
+            "tindakan": "Kirim peringatan SIAGA ROB ke warga Semarang Utara, Genuk: H-1 dan 3 jam sebelum puncak pasang (04:00 WIB).",
+            "waktu": "hari ini & Kamis 05-11-2026"
+          },
+          {
+            "pelaksana": "Camat & Lurah",
+            "tindakan": "Gerakkan kerja bakti saluran; data warga rentan (lansia, disabilitas, ibu hamil, balita).",
+            "waktu": "Sebelum Kamis 05-11-2026"
+          }
+        ]
+      }
+    }
+  },
+  "rekomendasi": [
+    {
+      "status": "Awas",
+      "wilayah": [
+        "Semarang Utara",
+        "Genuk"
+      ],
+      "tindakan": [
+        "Operasikan semua rumah pompa dan kerahkan pompa portabel ke titik genangan.",
+        "Buka posko pengungsian dan dapur umum; evakuasi lansia, anak-anak, dan penyandang disabilitas lebih dulu.",
+        "Alihkan lalu lintas dari jalan yang tergenang.",
+        "Siagakan tim SAR, ambulans, dan tenaga kesehatan."
+      ],
+      "dasar": "skor risiko (data simulasi)"
+    },
+    {
+      "status": "Siaga",
+      "wilayah": [
+        "Tugu",
+        "Semarang Timur"
+      ],
+      "tindakan": [
+        "Cek kesiapan rumah pompa, pintu air, dan tanggul; siapkan pompa cadangan.",
+        "Bersihkan saluran dan gorong-gorong dari sampah.",
+        "Siapkan posko dan logistik; sebarkan peringatan lewat RT/RW dan media sosial."
+      ],
+      "dasar": "skor risiko (data simulasi)"
+    },
+    {
+      "status": "Waspada",
+      "wilayah": [
+        "Gayamsari",
+        "Semarang Barat",
+        "Pedurungan",
+        "Semarang Tengah"
+      ],
+      "tindakan": [
+        "Pantau curah hujan dan pasang laut setiap 3 jam.",
+        "Gerakkan kerja bakti normalisasi saluran.",
+        "Ingatkan warga menyiapkan tas siaga."
+      ],
+      "dasar": "skor risiko (data simulasi)"
+    },
+    {
+      "status": "Aman",
+      "wilayah": [
+        "Candisari",
+        "Tembalang"
+      ],
+      "tindakan": [
+        "Lakukan pemeliharaan rutin saluran dan pompa.",
+        "Edukasi warga tentang jalur evakuasi."
+      ],
+      "dasar": "skor risiko (data simulasi)"
+    },
+    {
+      "status": "Kalender kesiapsiagaan",
+      "wilayah": [
+        "Kota Semarang"
+      ],
+      "tindakan": [
+        "Puncak hujan biasanya bulan Jan, Des, Nov: bersihkan saluran dan siapkan pompa sebulan sebelumnya.",
+        "Pasang laut tertinggi biasanya bulan Jun, Mei, Des: siagakan tanggul, pintu air, dan posko di kecamatan pesisir."
+      ],
+      "dasar": "riwayat hujan & pasang laut 01-01-2024 s.d. 04-11-2026 (data nyata)"
+    }
+  ]
+}

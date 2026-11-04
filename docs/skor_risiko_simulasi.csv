@@ -1,0 +1,11 @@
+kecamatan,curah_hujan_mm,pasang_laut_cm,penurunan_tanah,skor_risiko,status,lat,lon
+Semarang Utara,120,140,9.0,87.2,Awas,-6.958,110.413
+Genuk,110,135,8.0,80.8,Awas,-6.96,110.47
+Tugu,90,120,6.0,67.0,Siaga,-6.975,110.345
+Semarang Timur,100,100,5.0,62.5,Siaga,-6.975,110.435
+Gayamsari,95,90,5.0,58.8,Waspada,-6.992,110.455
+Semarang Barat,85,95,4.0,54.8,Waspada,-6.985,110.39
+Pedurungan,90,60,4.0,48.0,Waspada,-7.005,110.48
+Semarang Tengah,80,70,3.0,45.2,Waspada,-6.98,110.418
+Candisari,70,10,1.0,23.5,Aman,-7.015,110.425
+Tembalang,75,0,0.5,21.3,Aman,-7.06,110.44

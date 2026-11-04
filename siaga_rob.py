@@ -24,6 +24,7 @@ import functools
 import http.server
 import json
 import os
+import shutil
 import threading
 import time
 import urllib.request
@@ -1266,6 +1267,17 @@ def buat_dashboard(df, data_nyata, rekomendasi):
     return lokasi
 
 
+FOLDER_PAGES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs")   # untuk GitHub Pages
+
+
+def salin_ke_github_pages():
+    """Menyalin semua hasil ke folder docs/ (index.html = dashboard) agar bisa dibuka lewat GitHub Pages."""
+    shutil.copytree(FOLDER_HASIL, FOLDER_PAGES, dirs_exist_ok=True)
+    shutil.copyfile(os.path.join(FOLDER_HASIL, "dashboard_siaga_rob.html"), os.path.join(FOLDER_PAGES, "index.html"))
+    open(os.path.join(FOLDER_PAGES, ".nojekyll"), "w").close()   # sajikan file apa adanya tanpa Jekyll
+    print(f"📤 Salinan untuk GitHub Pages: {FOLDER_PAGES} (commit & push agar versi online ikut diperbarui)")
+
+
 PORT_SERVER = 8000   # dashboard dibuka di http://localhost:8000
 
 
@@ -1347,6 +1359,7 @@ def main():
 
     garis("Langkah 14 – Dashboard SIAGA ROB di localhost")
     buat_dashboard(df, data_nyata, rekomendasi)
+    salin_ke_github_pages()
     server, alamat = jalankan_server()
     webbrowser.open(alamat)
     print(f"🌐 Dashboard berjalan di: {alamat}")

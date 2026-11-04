@@ -1,0 +1,71 @@
+tanggal,kecamatan,hujan_mm,pasang_cm,penurunan_tanah,kiriman,skor,status,ancaman
+2026-11-04,Semarang Utara,0.2,63,9.0,False,37.3,Aman,rob
+2026-11-04,Genuk,0.1,63,8.0,False,34.7,Aman,rob
+2026-11-04,Tugu,0.0,57,6.0,False,28.3,Aman,rob
+2026-11-04,Semarang Timur,0.2,44,5.0,False,22.8,Aman,rob
+2026-11-04,Gayamsari,0.2,38,5.0,False,21.4,Aman,rob
+2026-11-04,Semarang Barat,0.2,44,4.0,False,20.3,Aman,rob
+2026-11-04,Pedurungan,0.1,25,4.0,False,15.9,Aman,rob
+2026-11-04,Semarang Tengah,0.2,32,3.0,False,15.0,Aman,rob
+2026-11-04,Candisari,0.2,0,1.0,False,2.6,Aman,banjir hujan
+2026-11-04,Tembalang,0.3,0,0.5,False,1.3,Aman,banjir hujan
+2026-11-05,Semarang Utara,0.2,108,9.0,False,47.8,Waspada,rob
+2026-11-05,Genuk,0.0,108,8.0,False,45.2,Waspada,rob
+2026-11-05,Tugu,0.1,97,6.0,False,37.7,Aman,rob
+2026-11-05,Semarang Timur,0.2,76,5.0,False,30.3,Aman,rob
+2026-11-05,Gayamsari,0.2,65,5.0,False,27.7,Aman,rob
+2026-11-05,Semarang Barat,0.2,76,4.0,False,27.8,Aman,rob
+2026-11-05,Pedurungan,0.0,43,4.0,False,20.0,Aman,rob
+2026-11-05,Semarang Tengah,0.2,54,3.0,False,20.2,Aman,rob
+2026-11-05,Candisari,0.2,0,1.0,False,2.6,Aman,banjir hujan
+2026-11-05,Tembalang,0.0,0,0.5,False,1.2,Aman,rob
+2026-11-06,Semarang Utara,3.0,98,9.0,False,46.2,Waspada,rob
+2026-11-06,Genuk,4.5,98,8.0,False,44.1,Waspada,rob
+2026-11-06,Tugu,4.3,88,6.0,False,36.7,Aman,rob
+2026-11-06,Semarang Timur,3.0,69,5.0,False,29.4,Aman,rob
+2026-11-06,Gayamsari,3.0,59,5.0,False,27.1,Aman,rob
+2026-11-06,Semarang Barat,3.0,69,4.0,False,26.9,Aman,rob
+2026-11-06,Pedurungan,4.5,39,4.0,False,20.3,Aman,rob
+2026-11-06,Semarang Tengah,3.0,49,3.0,False,19.7,Aman,rob
+2026-11-06,Candisari,3.0,0,1.0,False,3.3,Aman,banjir hujan
+2026-11-06,Tembalang,2.7,0,0.5,False,2.0,Aman,banjir hujan
+2026-11-07,Semarang Utara,1.3,86,9.0,False,42.9,Waspada,rob
+2026-11-07,Genuk,0.7,86,8.0,False,40.3,Waspada,rob
+2026-11-07,Tugu,0.9,77,6.0,False,33.2,Aman,rob
+2026-11-07,Semarang Timur,1.3,60,5.0,False,26.8,Aman,rob
+2026-11-07,Gayamsari,1.3,52,5.0,False,25.0,Aman,rob
+2026-11-07,Semarang Barat,1.3,60,4.0,False,24.3,Aman,rob
+2026-11-07,Pedurungan,0.7,34,4.0,False,18.1,Aman,rob
+2026-11-07,Semarang Tengah,1.3,43,3.0,False,17.9,Aman,rob
+2026-11-07,Candisari,1.3,0,1.0,False,2.8,Aman,banjir hujan
+2026-11-07,Tembalang,0.2,0,0.5,False,1.3,Aman,banjir hujan
+2026-11-08,Semarang Utara,1.8,78,9.0,False,41.2,Waspada,rob
+2026-11-08,Genuk,1.8,78,8.0,False,38.7,Aman,rob
+2026-11-08,Tugu,1.0,70,6.0,False,31.6,Aman,rob
+2026-11-08,Semarang Timur,1.8,55,5.0,False,25.8,Aman,rob
+2026-11-08,Gayamsari,1.8,47,5.0,False,23.9,Aman,rob
+2026-11-08,Semarang Barat,1.8,55,4.0,False,23.3,Aman,rob
+2026-11-08,Pedurungan,1.8,31,4.0,False,17.7,Aman,rob
+2026-11-08,Semarang Tengah,1.8,39,3.0,False,17.1,Aman,rob
+2026-11-08,Candisari,1.8,0,1.0,False,3.0,Aman,banjir hujan
+2026-11-08,Tembalang,1.2,0,0.5,False,1.6,Aman,banjir hujan
+2026-11-09,Semarang Utara,5.7,71,9.0,False,40.6,Waspada,rob
+2026-11-09,Genuk,4.2,71,8.0,False,37.7,Aman,rob
+2026-11-09,Tugu,9.0,64,6.0,False,32.3,Aman,rob
+2026-11-09,Semarang Timur,5.7,50,5.0,False,25.7,Aman,rob
+2026-11-09,Gayamsari,5.7,43,5.0,False,24.1,Aman,rob
+2026-11-09,Semarang Barat,5.7,50,4.0,False,23.2,Aman,rob
+2026-11-09,Pedurungan,4.2,28,4.0,False,17.7,Aman,rob
+2026-11-09,Semarang Tengah,5.7,36,3.0,False,17.4,Aman,rob
+2026-11-09,Candisari,5.7,0,1.0,False,4.0,Aman,banjir hujan
+2026-11-09,Tembalang,5.1,0,0.5,False,2.6,Aman,banjir hujan
+2026-11-10,Semarang Utara,8.8,70,9.0,False,41.2,Waspada,rob
+2026-11-10,Genuk,10.6,70,8.0,False,39.2,Aman,rob
+2026-11-10,Tugu,4.9,63,6.0,False,31.0,Aman,rob
+2026-11-10,Semarang Timur,8.8,49,5.0,False,26.3,Aman,rob
+2026-11-10,Gayamsari,8.8,42,5.0,False,24.6,Aman,rob
+2026-11-10,Semarang Barat,8.8,49,4.0,False,23.8,Aman,rob
+2026-11-10,Pedurungan,10.6,28,4.0,False,19.4,Aman,rob
+2026-11-10,Semarang Tengah,8.8,35,3.0,False,18.0,Aman,rob
+2026-11-10,Candisari,8.8,0,1.0,False,4.8,Aman,banjir hujan
+2026-11-10,Tembalang,4.6,0,0.5,False,2.5,Aman,banjir hujan
